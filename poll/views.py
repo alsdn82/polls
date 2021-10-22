@@ -29,7 +29,7 @@ def vote(request, question_id):
         sel_choice = question.choice_set.get(id=choice)
     except KeyError:
         return render(request, 'poll/detail.html', {
-            'question':question,
+            'question': question,
             'error_message': '항목을 선택 해주세요'
         })
     else:
